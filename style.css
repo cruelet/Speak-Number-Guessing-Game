@@ -5,8 +5,9 @@
 }
 
 body {
-    background: #2f3542 url('img/bg.jpg') no-repeat left center;
-    color: #fff;
+    background: #0b0e17 url('img/bg.png') no-repeat left center; /*edited background*/
+    background-size: cover; /* changed to have image fill container */
+    color: #ac94c0; /* made purple */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
