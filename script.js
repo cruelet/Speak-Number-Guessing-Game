@@ -38,26 +38,45 @@ function writeMessage(msg) {
 
 // Check msg against the secret number
 function checkNumber(msg) {
-  let num = Number(msg);
-
-  // Update the value of num if it's a single-digit number (refactored)
-  const wordToNumber = {
-    one: 1,
-    won: 1,
-    two: 2,
-    to: 2,
-    too: 2,
-    three: 3,
-    four: 4,
-    for: 4,
-    five: 5,
-    six: 6,
-    seven: 7,
-    eight: 8,
-    ate: 8,
-    nine: 9,
-    ten: 10,
-  };
+    
+  // Convert words to numbers using switch
+  switch (msg.toLowerCase()) {
+    case 'one':
+    case 'won':
+      num = 1;
+      break;
+    case 'two':
+    case 'to':
+    case 'too':
+      num = 2;
+      break;
+    case 'three':
+      num = 3;
+      break;
+    case 'four':
+    case 'for':
+      num = 4;
+      break;
+    case 'five':
+      num = 5;
+      break;
+    case 'six':
+      num = 6;
+      break;
+    case 'seven':
+      num = 7;
+      break;
+    case 'eight':
+    case 'ate':
+      num = 8;
+      break;
+    case 'nine':
+      num = 9;
+      break;
+    case 'ten':
+      num = 10;
+      break;
+  }
 
   // Check if the spoken content is a valid number
   if (Number.isNaN(num)) {
