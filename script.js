@@ -38,7 +38,7 @@ function writeMessage(msg) {
 
 // Check msg against the secret number
 function checkNumber(msg) {
-    
+     let num = Number(msg);
   // Convert words to numbers using switch
   switch (msg.toLowerCase()) {
     case 'one':
